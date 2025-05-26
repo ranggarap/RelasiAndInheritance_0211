@@ -14,13 +14,17 @@ public :
     void cetakDokter();    
 };
 
-    orang(string pNama) :
-        nama(pNama) {
-            cout << "orang dibuat\n" << endl;
-        }
-        ~orang() {
-            cout << "orang dihapus\n" << endl;
-        }
+class dokter {
+public :
+    string nama;
+    vector<pasien*> daftar_pasien;
+
+    dokter(string pNama) :nama(pNama) {
+        cout << "Dokter \"" << nama << "\" ada\n";
+    }
+    ~dokter() {
+        cout << "Dokter \"" << nama << "\" tidak ada\n";
+    }
 
         int jumlah(int a, int b) {
             return a + b;
