@@ -30,12 +30,13 @@ public :
     void cetakPasien();
 };   
 
-
-    pelajar(string pNama, string pSekolah) : orang(pNama), sekolah(pSekolah) {
-        cout << "Pelajar dibuat\n" << endl;
-    }
-    ~pelajar() {
-        cout << "Pelajar dihapus\n" << endl;
+void pasien :: tambahDokter(dokter* pDokter) {
+    daftar_dokter.push_back(pDokter);
+}
+void pasien :: cetakDokter() {
+    cout << "Daftar pasien dari dokter \"" << this->nama << "\" :\n";
+    for (auto& a : daftar_dokter) {
+        cout << a->nama << "\n";
     }
     string perkenalan() {
         return "Hallo, nama saya " + nama + "dari sekolah " + sekolah + "\n\n";
