@@ -38,10 +38,19 @@ void pasien :: cetakDokter() {
     for (auto& a : daftar_dokter) {
         cout << a->nama << "\n";
     }
-    string perkenalan() {
-        return "Hallo, nama saya " + nama + "dari sekolah " + sekolah + "\n\n";
+    cout << endl;
+}
+void dokter :: tambahPasien(pasien* pPasien) {
+    daftar_pasien.push_back(pPasien);
+    pPasien-> tambahDokter(this);
+}
+void dokter :: cetakPasien() {
+    cout << "Daftar pasien dari dokter \"" << this->nama << "\" :\n";
+    for (auto& a : daftar_pasien) {
+        cout << a->nama << "\n";
     }
-};
+    cout << endl;
+}
 
 int main() {
     pelajar siswa1("andi laksono", "SMAN 1 Bantul");
