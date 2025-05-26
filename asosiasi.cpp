@@ -26,10 +26,9 @@ public :
         cout << "Dokter \"" << nama << "\" tidak ada\n";
     }
 
-        int jumlah(int a, int b) {
-            return a + b;
-        }
-};
+    void tambahPasien(pasien*);
+    void cetakPasien();
+};   
 
 
     pelajar(string pNama, string pSekolah) : orang(pNama), sekolah(pSekolah) {
